@@ -48,7 +48,7 @@ button { cursor: pointer; }
   border-bottom: 1px solid rgba(234,223,229,.75);
 }
 .brand { display: flex; align-items: center; gap: 12px; min-width: 265px; }
-.brand img { width: 52px; height: 52px; object-fit: contain; border-radius: 50%; background: var(--pink-soft); }
+.brand img { width: 52px; height: 52px; object-fit: contain; border-radius: 50%; background: var(--pink-soft); padding: 3px; box-shadow: 0 5px 16px rgba(182,77,120,.14); flex: 0 0 auto; }
 .brand strong { display: block; font-family: Georgia, serif; font-size: 20px; }
 .brand small { display: block; color: var(--muted); margin-top: 2px; font-size: 11px; }
 .nav-links { margin-left: auto; display: flex; gap: 25px; font-size: 14px; font-weight: 700; }
@@ -147,6 +147,7 @@ h3 { font-size: 30px; }
 .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .product-image-wrap { position: relative; aspect-ratio: 1 / .84; background: var(--pink-soft); overflow: hidden; }
 .product-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s ease; }
+.product-image-wrap img.fallback-image { object-fit: cover; transform: none !important; }
 .product-card:hover .product-image-wrap img { transform: scale(1.035); }
 .product-badge { position: absolute; top: 13px; left: 13px; background: rgba(255,255,255,.9); border-radius: 999px; padding: 7px 10px; font-size: 10px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
 .product-body { padding: 18px; }
@@ -182,6 +183,9 @@ h3 { font-size: 30px; }
 
 footer { padding: 35px clamp(18px, 4vw, 60px); background: #221920; color: white; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
 footer p, footer small { color: #cdbfc6; }
+.footer-brand { display: flex; align-items: center; gap: 12px; }
+.footer-brand img { width: 52px; height: 52px; object-fit: contain; border-radius: 50%; background: #fff; padding: 3px; }
+.footer-brand p { margin: 5px 0 0; }
 .footer-links { display: flex; gap: 18px; font-size: 13px; font-weight: 800; }
 footer > small { grid-column: 1 / -1; }
 

@@ -82,6 +82,7 @@ const products = [
 
 let activeCategory = "All";
 let cart = [];
+try { cart = JSON.parse(localStorage.getItem("martineadesCart") || "[]"); } catch (_) { cart = []; }
 
 const productGrid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
@@ -113,7 +114,7 @@ function renderProducts() {
   productGrid.innerHTML = filtered.map(p => `
     <article class="product-card">
       <div class="product-image-wrap">
-        <img loading="lazy" src="${p.image}" alt="${p.name}" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#fde7ef,#eee8ff)'" />
+        <img loading="lazy" src="${p.image}" alt="${p.name}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/images/product-fallback.jpg';this.classList.add('fallback-image')" />
         <span class="product-badge">${p.badge}</span>
       </div>
       <div class="product-body">
@@ -144,6 +145,7 @@ function removeFromCart(id) {
 }
 
 function updateCart() {
+  try { localStorage.setItem("martineadesCart", JSON.stringify(cart)); } catch (_) {}
   const count = cart.reduce((sum, item) => sum + item.qty, 0);
   document.getElementById("cartCount").textContent = count;
   document.getElementById("cartTotal").textContent = money(cart.reduce((sum, item) => sum + item.price * item.qty, 0));
@@ -154,7 +156,7 @@ function updateCart() {
   }
   wrap.innerHTML = cart.map(item => `
     <div class="cart-item">
-      <img src="${item.image}" alt="${item.name}" />
+      <img src="${item.image}" alt="${item.name}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='assets/images/product-fallback.jpg'" />
       <div><strong>${item.name}</strong><small>${item.qty} × ${money(item.price)}</small></div>
       <button onclick="removeFromCart(${item.id})">Remove</button>
     </div>

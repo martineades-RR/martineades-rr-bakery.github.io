@@ -43,3 +43,8 @@ Open `index.html` in a modern browser. The product photos are loaded from Unspla
 ## Pricing note
 
 The menu uses realistic U.S. bakery price benchmarks researched in September 2026. Custom cakes and local bakery pricing vary by size, design and location, so update prices before taking real orders.
+
+
+## Branding & favicon
+
+This version includes a local optimized logo, browser favicon, Apple touch icon, web app icons and a manifest. All branding assets use relative paths so they work reliably on GitHub Pages and other static hosts. Product photos also have a local fallback image if a remote photo is temporarily unavailable.

@@ -4,7 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="martineades-RR — custom cakes, cookies, cupcakes, cheesecakes and celebration sweets." />
+  <meta name="theme-color" content="#fde7ef" />
+  <meta property="og:title" content="martineades-RR | Cakes, Cookies & Celebration Sweets" />
+  <meta property="og:description" content="Custom cakes, cookies, cupcakes, cheesecakes and celebration sweets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo.png" />
   <title>martineades-RR | Cakes, Cookies & Celebration Sweets</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +21,7 @@
 
   <header class="site-header">
     <a class="brand" href="#home" aria-label="martineades-RR home">
-      <img src="assets/images/martineades-rr-logo.png" alt="martineades-RR logo" />
+      <img src="assets/images/logo.png" alt="martineades-RR bakery logo" width="52" height="52" />
       <span>
         <strong>martineades-RR</strong>
         <small>Cakes • Cookies • Celebration Sweets</small>
@@ -44,7 +53,7 @@
         </div>
       </div>
       <div class="hero-card">
-        <img src="https://images.unsplash.com/photo-1680090966824-eb9e8500bc2b?auto=format&fit=crop&fm=jpg&q=82&w=1400" alt="Elegant white wedding cake with flowers" onerror="this.src='assets/images/martineades-rr-logo.png';this.style.objectFit='contain';this.style.padding='60px'" />
+        <img src="https://images.unsplash.com/photo-1680090966824-eb9e8500bc2b?auto=format&fit=crop&fm=jpg&q=82&w=1400" alt="Elegant white wedding cake with flowers" onerror="this.onerror=null;this.src='assets/images/product-fallback.jpg';this.style.objectFit='cover';this.style.padding='0'" />
         <div class="hero-card-copy">
           <span>Signature Collection</span>
           <strong>Elegant cakes for unforgettable celebrations</strong>
@@ -144,9 +153,12 @@
   </main>
 
   <footer>
-    <div>
-      <strong>martineades-RR</strong>
-      <p>Cakes, cookies, desserts & celebration sweets.</p>
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="martineades-RR logo" width="52" height="52" />
+      <div>
+        <strong>martineades-RR</strong>
+        <p>Cakes, cookies, desserts & celebration sweets.</p>
+      </div>
     </div>
     <div class="footer-links">
       <a href="#shop">Menu</a>
