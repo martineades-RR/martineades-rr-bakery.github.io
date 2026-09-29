@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="martineades-RR — custom cakes, cookies, cupcakes, cheesecakes and celebration sweets." />
+  <title>martineades-RR | Cakes, Cookies & Celebration Sweets</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">Freshly baked • Custom celebration orders • Pickup & local delivery</div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="martineades-RR home">
+      <img src="assets/images/martineades-rr-logo.png" alt="martineades-RR logo" />
+      <span>
+        <strong>martineades-RR</strong>
+        <small>Cakes • Cookies • Celebration Sweets</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#shop">Shop</a>
+      <a href="#custom">Custom Cakes</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Handmade for happy moments</span>
+        <h1>Sweet creations made to celebrate beautifully.</h1>
+        <p>Explore cakes, cookies, cupcakes, cheesecakes, brownies, donuts and elegant dessert boxes with a polished boutique bakery experience.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#shop">Explore the menu</a>
+          <a class="button secondary" href="#custom">Request a custom cake</a>
+        </div>
+        <div class="hero-notes">
+          <span>✓ 45+ menu options</span>
+          <span>✓ Real bakery photo references</span>
+          <span>✓ USD menu pricing</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1680090966824-eb9e8500bc2b?auto=format&fit=crop&fm=jpg&q=82&w=1400" alt="Elegant white wedding cake with flowers" onerror="this.src='assets/images/martineades-rr-logo.png';this.style.objectFit='contain';this.style.padding='60px'" />
+        <div class="hero-card-copy">
+          <span>Signature Collection</span>
+          <strong>Elegant cakes for unforgettable celebrations</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-strip" aria-label="Shop categories">
+      <button data-category="All" class="category-chip active">All</button>
+      <button data-category="Celebration Cakes" class="category-chip">Celebration Cakes</button>
+      <button data-category="Elegant Cakes" class="category-chip">Elegant Cakes</button>
+      <button data-category="Cupcakes" class="category-chip">Cupcakes</button>
+      <button data-category="Cookies" class="category-chip">Cookies</button>
+      <button data-category="Brownies & Bars" class="category-chip">Brownies & Bars</button>
+      <button data-category="Cheesecakes & Tarts" class="category-chip">Cheesecakes & Tarts</button>
+      <button data-category="Donuts & Treats" class="category-chip">Donuts & Treats</button>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Bakery menu</span>
+          <h2>Choose your favorite</h2>
+          <p>Prices are shown in USD and are designed as realistic U.S. bakery menu benchmarks. Custom work can vary by size and decoration.</p>
+        </div>
+        <div class="shop-tools">
+          <label class="search-wrap">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Cake, cookie, chocolate..." />
+          </label>
+          <label class="sort-wrap">
+            <span>Sort</span>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section class="custom-section" id="custom">
+      <div class="custom-copy">
+        <span class="eyebrow">Made for your event</span>
+        <h2>Custom cake consultation</h2>
+        <p>Planning a birthday, wedding, baby shower, graduation or corporate event? Send your colors, theme, servings and inspiration so we can prepare a custom quote.</p>
+        <div class="custom-features">
+          <span>Birthday cakes</span>
+          <span>Wedding cakes</span>
+          <span>Character themes</span>
+          <span>Floral designs</span>
+          <span>Dessert tables</span>
+          <span>Corporate orders</span>
+        </div>
+      </div>
+      <form class="quote-form" onsubmit="event.preventDefault(); showToast('Thanks! Your custom cake request is ready to review.');">
+        <div class="field-grid">
+          <label>Full name<input required type="text" placeholder="Your name" /></label>
+          <label>Event date<input required type="date" /></label>
+          <label>Guests<input required type="number" min="4" placeholder="24" /></label>
+          <label>Budget<input type="text" placeholder="$80 – $180" /></label>
+        </div>
+        <label>Tell us about your cake<textarea required rows="5" placeholder="Theme, colors, flavor, size and decoration ideas..."></textarea></label>
+        <button class="button primary" type="submit">Request consultation</button>
+      </form>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <span class="eyebrow">About martineades-RR</span>
+        <h2>Bakery favorites with a celebration-first style.</h2>
+      </div>
+      <div class="about-grid">
+        <article><strong>Fresh selection</strong><p>A wide menu of cakes, cookies, cupcakes, brownies, cheesecakes, tarts and donuts.</p></article>
+        <article><strong>Beautiful presentation</strong><p>Elegant pastel branding and products organized for birthdays, weddings and everyday treats.</p></article>
+        <article><strong>Easy ordering</strong><p>Browse, filter, add to cart and request custom cake consultations directly from the page.</p></article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <span class="eyebrow">Need help?</span>
+        <h2>We’re here for your sweet plans.</h2>
+        <p><strong>Customer Support:</strong> +1 (407) 555-0148</p>
+        <p><strong>Cake & Event Consultation:</strong> +1 (407) 555-0196</p>
+        <p><strong>Email:</strong> hello@martineades-rr.com</p>
+      </div>
+      <div class="location-card">
+        <strong>Demo store location</strong>
+        <p>1458 Celebration Avenue, Suite 204<br />Orlando, FL 32819<br />United States</p>
+        <small>Replace this demo address with your verified business address before publishing.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>martineades-RR</strong>
+      <p>Cakes, cookies, desserts & celebration sweets.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#shop">Menu</a>
+      <a href="#custom">Custom Orders</a>
+      <a href="CREDITS.md">Photo Credits</a>
+    </div>
+    <small>© 2026 martineades-RR. Demo storefront.</small>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <div><span class="eyebrow">Your order</span><h3>Shopping Cart</h3></div>
+      <button id="closeCart" class="icon-button" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Estimated total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="button primary full" onclick="showToast('Checkout is ready to connect to your payment provider.');">Proceed to checkout</button>
+      <small>Taxes, delivery and custom decoration fees may vary.</small>
+    </div>
+  </aside>
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
